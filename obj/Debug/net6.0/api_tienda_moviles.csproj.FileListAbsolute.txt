@@ -36,3 +36,4 @@ C:\Users\Udenar\Documents\Universidad\Metricas\API\api_tienda_moviles\api_tienda
 C:\Users\Udenar\Documents\Universidad\Metricas\API\api_tienda_moviles\api_tienda_moviles\obj\Debug\net6.0\api_tienda_moviles.pdb
 C:\Users\Udenar\Documents\Universidad\Metricas\API\api_tienda_moviles\api_tienda_moviles\obj\Debug\net6.0\api_tienda_moviles.genruntimeconfig.cache
 C:\Users\Udenar\Documents\Universidad\Metricas\API\api_tienda_moviles\api_tienda_moviles\obj\Debug\net6.0\ref\api_tienda_moviles.dll
+C:\Users\Udenar\Documents\Universidad\Metricas\API\api_tienda_moviles\api_tienda_moviles\obj\Debug\net6.0\api_tienda_moviles.sourcelink.json
