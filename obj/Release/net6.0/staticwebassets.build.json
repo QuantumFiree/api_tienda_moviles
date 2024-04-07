@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "mdZnxx/lmPaAJ/W/WgPaP0RyLpljiHs+jvNl1wVsNDs=",
+  "Source": "api_tienda_moviles",
+  "BasePath": "_content/api_tienda_moviles",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

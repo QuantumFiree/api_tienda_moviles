@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gd2XXIdnXJt5inUJW6UMxRVecO3voEyBzcg1T6j1NlRgi5TQ0cv9kSlYpqRwD9e9jsH5vrveLhhTlQJf1+FWpA==",
+  "dgSpecHash": "NYgDieZfXttf7oQFf/1OVa7EPFsygWCdPiU9gpG6N9TVUj50sL42l2Jt2Rqpx0ed+9PgX8NYTlQyxfZd1maKUQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Udenar\\Documents\\Universidad\\Metricas\\API\\api_tienda_moviles\\api_tienda_moviles\\api_tienda_moviles.csproj",
   "expectedPackageFiles": [
@@ -45,10 +45,9 @@
     "C:\\Users\\Udenar\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\Udenar\\.nuget\\packages\\system.text.encodings.web\\4.7.2\\system.text.encodings.web.4.7.2.nupkg.sha512",
     "C:\\Users\\Udenar\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
-    "C:\\Users\\Udenar\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
     "C:\\Users\\Udenar\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
-    "C:\\Users\\Udenar\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512",
-    "C:\\Users\\Udenar\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.27\\microsoft.netcore.app.host.win-x64.6.0.27.nupkg.sha512"
+    "C:\\Users\\Udenar\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\Udenar\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512"
   ],
   "logs": []
 }
