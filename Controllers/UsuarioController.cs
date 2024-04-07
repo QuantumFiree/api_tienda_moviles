@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using newapi6.models;
 using Npgsql;
 using Dapper;
+using api_tienda_moviles.Models;
 
 namespace newapi6.Controllers
 {
@@ -27,17 +28,23 @@ namespace newapi6.Controllers
             return usuarios;
         }
 
+        public IEnumerable<Usuario> GetUsuarioPorCorreo(string correo)
+        {
+            var usuarios = _connection.Query<Usuario>("SELECT * FROM usuario WHERE correo = @Correo", new {Correo = correo});
+            return usuarios;
+        }
+
         [HttpPost(Name = "PostUsuario")]
         public IActionResult Post([FromBody] Usuario usuario)
         {
-            if (usuario == null)
+            if (usuario  == null)
             {
                 return BadRequest("El objeto usuario no puede ser nulo");
             }
 
             // Insertar el agricultor en la base de datos
-            var query = "INSERT INTO usuario (nombres, apellidos, correo, telefono) " +
-                        "VALUES (@Nombres, @Apellidos, @Correo, @Telefono)";
+            var query = "INSERT INTO usuario (correo, clave, nombres, apellidos, telefono, rol) " +
+                        "VALUES (@Correo, @Clave, @Nombres, @Apellidos, @Telefono, @Rol)";
 
             _connection.Execute(query, usuario);
 
@@ -45,8 +52,8 @@ namespace newapi6.Controllers
             return Ok("Usuario creado exitosamente");
         }
 
-        [HttpPut("{id}", Name = "UpdateUsuario")]
-        public IActionResult Put(int id, [FromBody] Usuario usuario)
+        [HttpPut(Name = "UpdateUsuario")]
+        public IActionResult Put([FromBody] Usuario usuario)
         {
             if (usuario == null)
             {
@@ -54,31 +61,34 @@ namespace newapi6.Controllers
             }
 
             // Verificar si el agricultor con el ID proporcionado existe
-            var existingUsuario = _connection.QuerySingleOrDefault<Usuario>("SELECT * FROM usuario WHERE Id = @Id", new { Id = id });
+            var existingUsuario= _connection.QuerySingleOrDefault<Usuario>("SELECT * FROM usuario WHERE id = @Id", new { Id = usuario.Id });
 
             if (existingUsuario == null)
             {
-                return NotFound($"Usuario con ID {id} no encontrado");
+                return NotFound($"Usuario con ID {usuario.Id} no encontrado");
             }
 
             // Actualizar los datos del agricultor existente con los nuevos datos
-            var query = "UPDATE usuario SET nombres = @Nombres, apellidos = @Apellidos," +
-                        "correo = @Correo, telefono = @Telefono";
+            var query = "UPDATE usuario SET correo = @Correo, clave = @Clave, nombres = @Nombres, " +
+                "apellidos = @Apellidos, telefono = @Telefono, rol = @Rol" +
+                        " WHERE id = @Id";
 
             _connection.Execute(query, new
             {
-                Id = id,
+                usuario.Correo,
+                usuario.Clave,
                 usuario.Nombres,
                 usuario.Apellidos,
-                usuario.Correo,
-                usuario.Telefono
+                usuario.Telefono,
+                usuario.Rol,
+                usuario.Id,
             });
 
             // Devolver una respuesta exitosa
-            return Ok($"Usuario con ID {id} actualizado exitosamente");
+            return Ok($"Usuario con ID {usuario.Id} actualizado exitosamente");
         }
 
-        [HttpDelete("{id}", Name = "DeleteUsuaio")]
+        [HttpDelete("{id}", Name = "DeleteUsuario")]
         public IActionResult Delete(int id)
         {
             // Verificar si el agricultor con el ID proporcionado existe

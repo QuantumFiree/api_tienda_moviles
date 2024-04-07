@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("api_tienda_moviles")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1437998b2f93a42799943c545e57c44049ca263c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e632ce7011176059e343277aa17601578b2f02f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("api_tienda_moviles")]
 [assembly: System.Reflection.AssemblyTitleAttribute("api_tienda_moviles")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

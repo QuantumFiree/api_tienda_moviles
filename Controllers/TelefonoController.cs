@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using newapi6.models;
 using Npgsql;
 using Dapper;
@@ -11,6 +12,7 @@ namespace newapi6.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class TelefonoController : ControllerBase
     {
         private readonly NpgsqlConnection _connection;

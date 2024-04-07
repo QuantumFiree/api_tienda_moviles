@@ -37,3 +37,11 @@ C:\Users\Udenar\Documents\Universidad\Metricas\API\api_tienda_moviles\api_tienda
 C:\Users\Udenar\Documents\Universidad\Metricas\API\api_tienda_moviles\api_tienda_moviles\obj\Debug\net6.0\api_tienda_moviles.genruntimeconfig.cache
 C:\Users\Udenar\Documents\Universidad\Metricas\API\api_tienda_moviles\api_tienda_moviles\obj\Debug\net6.0\ref\api_tienda_moviles.dll
 C:\Users\Udenar\Documents\Universidad\Metricas\API\api_tienda_moviles\api_tienda_moviles\obj\Debug\net6.0\api_tienda_moviles.sourcelink.json
+C:\Users\Udenar\Documents\Universidad\Metricas\API\api_tienda_moviles\api_tienda_moviles\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Udenar\Documents\Universidad\Metricas\API\api_tienda_moviles\api_tienda_moviles\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Udenar\Documents\Universidad\Metricas\API\api_tienda_moviles\api_tienda_moviles\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Udenar\Documents\Universidad\Metricas\API\api_tienda_moviles\api_tienda_moviles\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Udenar\Documents\Universidad\Metricas\API\api_tienda_moviles\api_tienda_moviles\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Udenar\Documents\Universidad\Metricas\API\api_tienda_moviles\api_tienda_moviles\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Udenar\Documents\Universidad\Metricas\API\api_tienda_moviles\api_tienda_moviles\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Udenar\Documents\Universidad\Metricas\API\api_tienda_moviles\api_tienda_moviles\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

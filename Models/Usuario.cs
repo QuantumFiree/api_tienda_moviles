@@ -1,32 +1,35 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace newapi6.models
+﻿namespace api_tienda_moviles.Models
 {
     public class Usuario
     {
         public int Id { get; set; }
+        public string Clave { get; set; }
+        public string Correo { get; set; }
         public string Nombres { get; set; }
         public string Apellidos { get; set; }
         public int Telefono { get; set; }
-        public string Correo { get; set; }
+        public int? Rol { get; set; }
 
         public Usuario() // Constructor por defecto requerido para Dapper
         {
+            Id = 0;
+            Clave = "";
+            Correo = "";
             Nombres = "";
             Apellidos = "";
             Telefono = 0;
-            Correo = "";
+            Rol = 0;
         }
 
-        public Usuario(string nombres, string apellidos, string correo, int telefono)
+        public Usuario(int id, string correo, string clave, string nombres, string apellidos, int telefono, int? rol)
         {
+            Id = id;
+            Correo = correo;
+            Clave = clave;
             Nombres = nombres;
             Apellidos = apellidos;
-            Correo = correo;
             Telefono = telefono;
+            Rol = rol;
         }
     }
 }

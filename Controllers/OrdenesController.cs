@@ -21,29 +21,39 @@ namespace newapi6.Controllers
         }
 
         [HttpGet(Name = "GetOrdenes")]
-        public IEnumerable<Telefono> Get()
+        public IEnumerable<Ordenes> Get()
         {
-            var ordenes = _connection.Query<Telefono>("SELECT * FROM ordenes");
+            var ordenes = _connection.Query<Ordenes>("SELECT * FROM ordenes");
             return ordenes;
         }
 
         [HttpPost(Name = "PostOrdenes")]
         public IActionResult Post([FromBody] Ordenes orden)
         {
-            if (orden == null)
+            try
             {
-                return BadRequest("El objeto orden no puede ser nulo");
+                if (orden == null)
+                {
+                    return BadRequest("El objeto orden no puede ser nulo");
+                }
+
+                // Insertar el agricultor en la base de datos
+                var query = "INSERT INTO ordenes (idusuario, idtelefono, cantidad, preciototal, fechaorden) " +
+                            "VALUES (@Idusuario, @Idtelefono, @Cantidad, @Preciototal, @Fechaorden)";
+
+                _connection.Execute(query, orden);
+
+                // Devolver una respuesta exitosa
+                return Ok("Orden creada exitosamente");
             }
-
-            // Insertar el agricultor en la base de datos
-            var query = "INSERT INTO ordenes (idusuario, idtelefono, cantidad, preciototal, fechaorden" +
-                        "VALUES (@Idusuario, @Idtelefono, @Cantidad, @Preciototal, @Fechaorden";
-
-            _connection.Execute(query, orden);
-
-            // Devolver una respuesta exitosa
-            return Ok("Orden creada exitosamente");
+            catch (Exception ex)
+            {
+                // Manejar el error y devolver una respuesta adecuada
+                Console.WriteLine($"Se produjo un error al procesar la solicitud: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Se produjo un error interno en el servidor");
+            }
         }
+
 
         [HttpPut("{id}", Name = "UpdateOrdenes")]
         public IActionResult Put(int id, [FromBody] Ordenes orden)
